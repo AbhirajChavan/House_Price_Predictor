@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h2>House Price Prediction</h2>
+    <form method="POST">
+        <label>BHK:</label>
+        <input type="number" name="BHK" required><br><br>
+
+        <label>Size_in_SqFt:</label>
+        <input type="number" name="Size_in_SqFt" required><br><br>
+
+        <label>City:</label>
+        <input type="text" name="City" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <h3>Predicted Price: ₹{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
